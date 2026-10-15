@@ -1,0 +1,43 @@
+/* BZ_study — тёплая «студенческая» тема: лайм + фиолет + розовый */
+:root {
+  --accent: #c6f432;
+  --accent-rgb: 198, 244, 50;
+  --blob-1: #8b5cf6;
+  --blob-2: #22d3ee;
+  --blob-3: #f472b6;
+}
+
+/* заголовок-обещание чуть компактнее имени */
+.hero h1 { font-size: clamp(44px, 7.2vw, 104px); }
+.hero h1 .mirror__reflection { height: .7em; }
+
+.hero__sub {
+  margin: 0 0 26px;
+  color: var(--muted);
+  font-size: clamp(15px, 1.4vw, 18px);
+  max-width: 520px;
+}
+.hero__sub b { color: var(--text); font-weight: 700; }
+
+/* «стикер» про дедлайн */
+.sticker {
+  position: absolute;
+  z-index: 4;
+  right: 4%;
+  top: -18px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  font-family: var(--f-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: #0a0a10;
+  background: var(--accent);
+  transform: rotate(6deg);
+  box-shadow: 0 14px 30px -10px rgba(var(--accent-rgb), .6);
+  animation: wobble 5s ease-in-out infinite;
+}
+@keyframes wobble { 50% { transform: rotate(2deg) translateY(-6px); } }
+
+@media (max-width: 640px) {
+  .sticker { right: 0; top: -26px; font-size: 12px; }
+}
