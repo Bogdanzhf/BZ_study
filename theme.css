@@ -53,3 +53,6 @@
 @media (max-width: 640px) {
   .sticker { right: 0; top: -26px; font-size: 12px; }
 }
+
+/* слово вместо числа в ячейке статистики */
+.stat strong.stat__word { font-size: clamp(26px, 3vw, 42px); }
